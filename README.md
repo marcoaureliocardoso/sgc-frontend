@@ -1,5 +1,8 @@
 # SgcFrontend
 
+Angular version of SGC Front-end https://github.com/LDI-Ufes/sgc
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
 ## Development server
