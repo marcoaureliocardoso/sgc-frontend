@@ -1,1 +1,72 @@
-<p>document-list works!</p>
+<style>
+  .link-style {
+    color: blue; /* Set the text color to blue (typical link color) */
+    text-decoration: underline; /* Add an underline to simulate the link style */
+    cursor: pointer; /* Change the cursor to a pointer on hover to indicate clickability */
+  }
+
+  /* Optionally, change the link color and underline on hover to make it more interactive */
+  .link-style:hover {
+    color: darkblue; /* Darker shade of blue on hover */
+    text-decoration: underline; /* Retain the underline on hover */
+    cursor: pointer; /* Change the cursor to a pointer on hover as well */
+  }
+</style>
+<nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+  <ol class="breadcrumb border-top border-bottom bg-light">
+    <li class="breadcrumb-item">Colaboradores</li>
+    <li class="breadcrumb-item active" aria-current="page">
+      Listar Documentos de Vínculos
+    </li>
+  </ol>
+</nav>
+<section id="pageContent">
+  <main role="main">
+    <div class="row justify-content-center">
+      <div class="col-xl-10 col-xxl-8">
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead>
+              <th>Colaborador</th>
+              <th>Função</th>
+              <th>Curso</th>
+              <th>Nome do arquivo</th>
+              <th>Tipo</th>
+            </thead>
+            <tbody>
+              <!-- @foreach (documents as document) -->
+              <tr *ngFor="let document of documentList">
+                <td>
+                  <a href="#" target="_blank">
+                    {{ document.related.employee.name }}
+                  </a>
+                </td>
+                <td>
+                  <a href="#" target="_blank">
+                    {{ document.related.role.name }}
+                  </a>
+                </td>
+                <td>
+                  {{ document.related.course?.name ?? "-" }}
+                </td>
+                <td>
+                  <!-- <a [href]="document.fileUrl" target="_blank">{{ document.fileName }}</a> -->
+                  <a class="link-style" (click)="openInNewTab(document.file!)" >{{ document.fileName }}</a >
+                </td>
+                <td>{{ document.documentType.name }}</td>
+              </tr>
+              <!-- @endforeach -->
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <!-- {!! documents->links() !!} -->
+        <a href="#" class="btn btn-secondary">Voltar para o Início</a>&nbsp;
+        <!-- @can('applicant-store') -->
+        <a href="#" class="btn btn-warning">Importar Documento de Vínculo</a>
+        <!-- @endcan -->
+        <br /><br />
+      </div>
+    </div>
+  </main>
+</section>
