@@ -1,6 +1,6 @@
-import { Course } from "../courses/course";
-import { Pole } from "../poles/pole";
-import { Role } from "../roles/role";
+import { Course } from '../courses/course';
+import { Pole } from '../poles/pole';
+import { Role } from '../roles/role';
 
 export interface Applicant {
     id: number;

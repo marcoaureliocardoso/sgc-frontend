@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { ResponsibilityListComponent } from './responsibility-list/responsibility-list.component';
+
+const routes: Routes = [
+  { path: '', component: ResponsibilityListComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

@@ -1,6 +1,6 @@
-import { Course } from "../courses/course";
-import { UserType } from "../user-types/user-type";
-import { User } from "../users/user";
+import { Course } from '../courses/course';
+import { UserType } from '../user-types/user-type';
+import { User } from '../users/user';
 
 export interface Responsibility {
     id: number;

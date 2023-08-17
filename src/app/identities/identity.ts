@@ -1,4 +1,4 @@
-import { DocumentType } from "../document-types/document-type";
+import { DocumentType } from '../document-types/document-type';
 
 export interface Identity {
     id: number;

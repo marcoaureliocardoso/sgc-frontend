@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+
 import { Pole } from '../pole';
 import { PoleService } from '../pole.service';
 

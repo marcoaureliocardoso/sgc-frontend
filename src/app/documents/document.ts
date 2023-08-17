@@ -1,5 +1,5 @@
-import { Bond } from "../bonds/bond";
-import { DocumentType } from "../document-types/document-type";
+import { Bond } from '../bonds/bond';
+import { DocumentType } from '../document-types/document-type';
 
 export interface Document {
     id: number;

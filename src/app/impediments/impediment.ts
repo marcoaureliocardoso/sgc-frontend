@@ -1,5 +1,5 @@
-import { Bond } from "../bonds/bond";
-import { User } from "../users/user";
+import { Bond } from '../bonds/bond';
+import { User } from '../users/user';
 
 export interface Impediment {
     id: number;

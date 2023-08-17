@@ -1,4 +1,4 @@
-import { Employee } from "../employees/employee";
+import { Employee } from '../employees/employee';
 
 export interface Phone {
     id: number;

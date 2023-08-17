@@ -10,7 +10,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Início</a></li>
 
                     <!-- @cannot('isLdi') {{-- @canany(['isAdm', 'isDir', 'isAss', 'isSec', 'isCoord']) --}} -->
                         <li class="nav-item dropdown">
@@ -106,20 +106,20 @@
                                 <!-- @can('isAdm-global') -->
                                     <li><hr class="dropdown-divider"></li>
                                     <li><h6 class="dropdown-header">Usuários</h6></li>
-                                    <li><a class="dropdown-item" href="#">Listar<!-- {{--  Usuários --}} --></a></li>
-                                    <li><a class="dropdown-item" href="#">Cadastrar<!-- {{--  Usuário --}} --></a></li>
+                                    <li><a class="dropdown-item" href="/usuarios">Listar<!-- {{--  Usuários --}} --></a></li>
+                                    <li><a class="dropdown-item" href="/usuarios/create">Cadastrar<!-- {{--  Usuário --}} --></a></li>
                                 <!-- @endcan
                                 @can('isAdm-global') -->
                                     <li><hr class="dropdown-divider"></li>
                                     <li><h6 class="dropdown-header">Atribuições de papel</h6></li>
-                                    <li><a class="dropdown-item" href="#">Listar<!-- {{--  Atribuições de Papel --}} --></a></li>
-                                    <li><a class="dropdown-item" href="#">Cadastrar<!-- {{--  Atrib. de Papel --}} --></a></li>
+                                    <li><a class="dropdown-item" href="/papeis">Listar<!-- {{--  Atribuições de Papel --}} --></a></li>
+                                    <li><a class="dropdown-item" href="/papeis/create">Cadastrar<!-- {{--  Atrib. de Papel --}} --></a></li>
                                 <!-- @endcan
                                 @can('isAdm-global') -->
                                     <li><hr class="dropdown-divider"></li>
                                     <li><h6 class="dropdown-header">SGC</h6></li>
-                                    <li><a class="dropdown-item" routerLink="/info">Logs de sistema</a></li>
-                                    <li><a class="dropdown-item" routerLink="/logs">System Info</a></li>
+                                    <li><a class="dropdown-item" routerLink="/logs">Logs de sistema</a></li>
+                                    <li><a class="dropdown-item" routerLink="/info">System Info</a></li>
                             </ul>
                         </li>
                     <!-- {{-- @endcannot --}} -->
