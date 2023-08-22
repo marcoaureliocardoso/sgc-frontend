@@ -17,6 +17,7 @@ export class EmployeeListComponent {
   }
 
   async getEmployeeList(): Promise<void> {
-    this.employeeList = await this.employeeService.getEmployeeList();
+    let response: any = await this.employeeService.getEmployeeListPage();
+    this.employeeList = await response.content;
   }
 }
