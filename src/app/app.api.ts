@@ -1,7 +1,8 @@
 const PROTOCOL = 'http';
 const HOSTNAME = 'localhost';
-const PORT = 3000;
-const API_URL = `${PROTOCOL}://${HOSTNAME}:${PORT}`;
+const PORT = 8080; //3000;
+const API_URL_SUFFIX = '/api/v1';
+const API_URL = `${PROTOCOL}://${HOSTNAME}:${PORT}${API_URL_SUFFIX}`;
 
 export const API_ADDRESSES = `${API_URL}/addresses`;
 export const API_APPLICANTS = `${API_URL}/applicants`;
